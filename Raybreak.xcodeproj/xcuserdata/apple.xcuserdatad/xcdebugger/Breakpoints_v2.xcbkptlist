@@ -14,10 +14,8 @@
             filePath = "Raybreak/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "draw(in:)"
-            landmarkType = "7">
+            startingLineNumber = "33"
+            endingLineNumber = "33">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,10 +28,8 @@
             filePath = "Raybreak/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "mtkView(_:drawableSizeWillChange:)"
-            landmarkType = "7">
+            startingLineNumber = "33"
+            endingLineNumber = "33">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
