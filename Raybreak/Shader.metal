@@ -17,5 +17,5 @@ vertex float4 vertex_shader(const device packed_float3 * vertices[[buffer(0)]], 
 }
 
 fragment half4 fragment_shader() {
-    return half4(1, 0, 0, 1); // (red, blue, green, alpha), return a red color
+    return half4(1, 1, 0, 1); // (red, blue, green, alpha), return a red color
 }
