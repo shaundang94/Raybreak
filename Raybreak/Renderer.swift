@@ -26,6 +26,13 @@ class Renderer: NSObject {
     var vertexBuffer: MTLBuffer?
     var indexBuffer: MTLBuffer?
     
+    struct Constants {
+        var animateBy: Float = 0
+    }
+    var constants = Constants()
+    var time: Float = 0 // how long the app's been running
+    
+    
     init(device: MTLDevice) {
         self.device = device
         commandQueue = device.makeCommandQueue()
@@ -70,11 +77,16 @@ extension Renderer: MTKViewDelegate {
             let descriptor = view.currentRenderPassDescriptor else {
             return
         }
+        time +=  1 / Float(view.preferredFramesPerSecond) // preferredFramesPerSecond default is 60
+        let animateBy = abs(sin(time)/2 + 0.5)
+        constants.animateBy = animateBy
+        
         let commandBuffer = commandQueue.makeCommandBuffer() //create command buffer to hold command encoder
         let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: descriptor)
         commandEncoder?.setRenderPipelineState(pipelineState)
         commandEncoder?.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
         //commandEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: vertices.count) // doesn't happen until all the commands are encoded
+        commandEncoder?.setVertexBytes(&constants, length: MemoryLayout<Constants>.stride, index: 1)
         commandEncoder?.drawIndexedPrimitives(type: .triangle, indexCount: indices.count, indexType: .uint16, indexBuffer: indexBuffer, indexBufferOffset: 0)
         commandEncoder?.endEncoding() //finish encodeing all the commands
         commandBuffer?.present(drawable)
