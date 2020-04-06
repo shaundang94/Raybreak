@@ -6,8 +6,14 @@
 //  Copyright © 2020 demo. All rights reserved.
 //
 
-import Foundation
+import MetalKit
 
 class Node {
+    func add(childNode: Node) {
+        
+    }
     
+    func render(commandEncoder: MTLRenderCommandEncoder, deltaTime: Float) {
+        
+    }
 }

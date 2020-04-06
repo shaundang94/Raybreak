@@ -6,9 +6,20 @@
 //  Copyright © 2020 demo. All rights reserved.
 //
 
-import Foundation
+import MetalKit
 
 
-class Scene {
+class Scene: Node {
+    var device: MTLDevice
+    var size: CGSize
+    var node: Node?
     
+    init(device: MTLDevice, size: CGSize) {
+        self.device = device
+        self.size = size
+    }
+    
+    override func add(childNode: Node) {
+        self.node = childNode
+    }
 }

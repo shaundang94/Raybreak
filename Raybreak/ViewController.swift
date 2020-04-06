@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         metalView.device = MTLCreateSystemDefaultDevice() //create a refrence to the GPU
         renderer = Renderer(device: metalView.device!)
+        renderer.scene = GameScene(device: metalView.device!, size: metalView.bounds.size)
         metalView.clearColor = Colors.wenderlichGreen
         metalView.delegate = self.renderer
     }

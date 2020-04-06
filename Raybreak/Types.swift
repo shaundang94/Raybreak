@@ -11,4 +11,5 @@ import simd //import MetalKit时会自动导入simd，simd里面包含了这些�
 struct Vertex {
     var position: SIMD3<Float>
     var color: SIMD4<Float>
+    var texture: SIMD2<Float>
 }
