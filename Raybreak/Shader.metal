@@ -9,7 +9,7 @@
 #include <metal_stdlib>
 using namespace metal;
 
-//这里面用的是C++
+//这里面用的是C++ (metal shading language)
 
 struct Constants { //定义这个struct，好让vertex函数能识别
     float animateBy;

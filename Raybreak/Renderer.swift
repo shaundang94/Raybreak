@@ -52,11 +52,11 @@ class Renderer: NSObject {
         let vertexFunc = library?.makeFunction(name: "vertex_shader")
         let fragmentFunc = library?.makeFunction(name: "fragment_shader")
         
+        //从PipelineDescriptor中生成PipelineState
         let pipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.vertexFunction = vertexFunc
         pipelineDescriptor.fragmentFunction = fragmentFunc
         pipelineDescriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
-        
         do {
             pipelineState = try device.makeRenderPipelineState(descriptor: pipelineDescriptor)
         } catch let error as NSError {
