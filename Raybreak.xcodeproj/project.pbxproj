@@ -15,6 +15,11 @@
 		188E92472439D1AD00700F6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188E92452439D1AD00700F6F /* LaunchScreen.storyboard */; };
 		188E924F2439E71600700F6F /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E924E2439E71600700F6F /* Renderer.swift */; };
 		188E92512439E82A00700F6F /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 188E92502439E82A00700F6F /* Shader.metal */; };
+		18BC3EBE243AB1FD00360B2E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC3EBD243AB1FD00360B2E /* Types.swift */; };
+		18BC3EC2243AF6D300360B2E /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC3EC1243AF6D300360B2E /* Plane.swift */; };
+		18BC3EC4243AF6DC00360B2E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC3EC3243AF6DC00360B2E /* Node.swift */; };
+		18BC3EC6243AFB6700360B2E /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC3EC5243AFB6700360B2E /* Scene.swift */; };
+		18BC3EC8243AFB7300360B2E /* GameSence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BC3EC7243AFB7300360B2E /* GameSence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		188E92482439D1AD00700F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188E924E2439E71600700F6F /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		188E92502439E82A00700F6F /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		18BC3EBD243AB1FD00360B2E /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		18BC3EC1243AF6D300360B2E /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		18BC3EC3243AF6DC00360B2E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		18BC3EC5243AFB6700360B2E /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		18BC3EC7243AFB7300360B2E /* GameSence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +70,38 @@
 		188E92392439D1AC00700F6F /* Raybreak */ = {
 			isa = PBXGroup;
 			children = (
+				18BC3EC0243AF6BF00360B2E /* Nodes */,
+				18BC3EBF243AF6B200360B2E /* Scenes */,
 				188E923A2439D1AC00700F6F /* AppDelegate.swift */,
 				188E923C2439D1AC00700F6F /* SceneDelegate.swift */,
 				188E923E2439D1AC00700F6F /* ViewController.swift */,
 				188E924E2439E71600700F6F /* Renderer.swift */,
 				188E92502439E82A00700F6F /* Shader.metal */,
+				18BC3EBD243AB1FD00360B2E /* Types.swift */,
 				188E92402439D1AC00700F6F /* Main.storyboard */,
 				188E92432439D1AD00700F6F /* Assets.xcassets */,
 				188E92452439D1AD00700F6F /* LaunchScreen.storyboard */,
 				188E92482439D1AD00700F6F /* Info.plist */,
 			);
 			path = Raybreak;
+			sourceTree = "<group>";
+		};
+		18BC3EBF243AF6B200360B2E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				18BC3EC5243AFB6700360B2E /* Scene.swift */,
+				18BC3EC7243AFB7300360B2E /* GameSence.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		18BC3EC0243AF6BF00360B2E /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				18BC3EC3243AF6DC00360B2E /* Node.swift */,
+				18BC3EC1243AF6D300360B2E /* Plane.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +177,14 @@
 			files = (
 				188E924F2439E71600700F6F /* Renderer.swift in Sources */,
 				188E923F2439D1AC00700F6F /* ViewController.swift in Sources */,
+				18BC3EC8243AFB7300360B2E /* GameSence.swift in Sources */,
 				188E923B2439D1AC00700F6F /* AppDelegate.swift in Sources */,
+				18BC3EC4243AF6DC00360B2E /* Node.swift in Sources */,
+				18BC3EBE243AB1FD00360B2E /* Types.swift in Sources */,
 				188E92512439E82A00700F6F /* Shader.metal in Sources */,
 				188E923D2439D1AC00700F6F /* SceneDelegate.swift in Sources */,
+				18BC3EC2243AF6D300360B2E /* Plane.swift in Sources */,
+				18BC3EC6243AFB6700360B2E /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
